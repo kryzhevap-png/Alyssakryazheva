@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+
+  <style>
+    body {
+      text-align: center;
+    }
+
+    img {
+      width: 400px;
+      height: 250px;
+      margin: 10px;
+    }
+
+    a {
+      text-decoration: none;
+      color: beige;
+      margin: 10px;
+    }
+
+    .logo {
+      width: 40px;
+      height: 40px;
+      left: 20px;
+      position: absolute;
+    }
+
+    .caed {
+      display: inline-block;
+    }
+
+    .site-header {
+      background: #007BFF;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 24px;
+      position: relative;
+    }
+
+    .site-footer {
+      margin-top: 40px;
+      background: #6C757D;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+   
+  </style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <img class="logo" src="assets/1498802745470_bulletin.jpg">
+
+  <a href="login.php">Войти</a>
+  <a href="register.php">Регистрация</a>
+</header>
+
+
+
+<!-- СЛАЙДЕР -->
+<div id="carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+
+  <div class="carousel-inner">
+
+    <div class="carousel-item active">
+      <img src="assets/67be0e9604c2fe619a95ca87.jpg">
+      <p>Обучение управлению катерами</p>
+    </div>
+
+    <div class="carousel-item">
+      <img src="assets/boat.png">
+      <p>Практика на яхтах</p>
+    </div>
+
+    <div class="carousel-item">
+      <img src="assets/sNP7I-h35CvIJxmvNQiERhJRx-YhipQKfCK4rtz.jpg">
+      <p>Управление круизными лайнерами</p>
+    </div>
+
+    <div class="carousel-item">
+      <img src="assets/64536aafe5a415045ada8c4a.jpg">
+      <p>Речная навигация</p>
+    </div>
+
+  </div>
+
+  <button class="btn btn-primary" data-bs-target="#carousel" data-bs-slide="prev">
+    Назад
+  </button>
+
+  <button class="btn btn-primary" data-bs-target="#carousel" data-bs-slide="next">
+    Вперёд
+  </button>
+
+</div>
+<div style="width:80%; margin:30px auto; text-align:center; font-size:18px; line-height:1.6;">
+
+  <p><strong>«Водить.РФ»</strong> -  обучение и подготовка к управлению речным транспортом с 2010 года.</p>
+
+  <p><strong>Способы оплаты:</strong></p>
+
+  <p>
+    - Предоплата по QR-коду
+
+    - Оплата картой МИР
+
+    - Постоплата в офисе организации
+  </p>
+
+  <p><strong>Контакты:</strong></p>
+
+  <p>
+    Адрес: г. Москва, ул. Большая Ордынка, д. 15
+
+    Горячая линия: +7 (495) 123-45-67
+  </p>
+
+  <p>Если возникли вопросы — свяжитесь с нами, мы поможем.</p>
+
+</div>
+
+<div class="caed">
+  <img src="assets/5946dd94900ba9b56b0d52c88fff9d0d.jpg">
+  <p>Катера</p>
+</div>
+
+<div class="caed">
+  <img src="assets/64536aafe5a415045ada8c4a.jpg">
+  <p>Яхты</p>
+</div>
+
+<div class="caed">
+  <img src="assets/67be0e9604c2fe619a95ca87.jpg">
+  <p>Лайнеры</p>
+</div>
+
+<footer class="site-footer">
+  <p>Адрес: г. Москва, ул. Большая Ордынка, д. 15</p>
+  <p>Телефон: +7 (495) 123-45-67</p>
+</footer>
+
+<script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

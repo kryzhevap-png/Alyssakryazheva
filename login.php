@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <h1>Авторизация</h1>
+    </header>
+
+    <h2 class="mt-4">Вход</h2>
+    <form action="login_action.php" method="post">
+
+        <label for="login">Login</label>
+        <input type="text" id="login" name="login" class="form-control mb-3" required>
+
+        <label for="password">Пароль</label>
+        <input type="password" id="password" name="password" class="form-control mb-3" required>
+
+        <?php
+        if(isset($_GET['error'])){
+            echo "<p style='color:red;text-align:center;'>" . $_GET['error'] . "</p>";
+        }
+
+          if(isset($_GET['success'])){
+            echo "<p style='color:green;text-align:center;'>" . $_GET['success'] . "</p>";
+        }
+        ?>
+
+        <button type="submit" class="btn btn-primary">Войти</button>
+    </form>
+
+    <p class="mt-3 text-muted">Еще не зарегистрирированы?<a href="register.php">Зарегистрироваться</a>
+    </p>
+
+   <footer class="site-footer">
+    <p><strong>Наше местонахождение:</strong></p>
+    <p>Адрес головного офиса: г. Москва, ул. Большая Ордынка, д. 15</p>
+    <p>Телефон горячей линии: +7 (495) 123-45-67</p>
+    <p>Если возникли вопросы или пожелания, позвоните нам. Ответим оперативно и подробно.</p>
+
+    <p><strong>Мы в соцсетях:</strong></p>
+
+    <a href="" target="_blank">
+        <img src="soscial/social.jpg" width="32" > VK
+        
+    </a>
+   <br>
+
+    <a href="" target="_blank">
+        <img src="" width="32" > Одноклассники
+    </a>
+</footer>
+<script src="jquery-3.7.1.min.js"></script>
+    <script>
+$(document).ready(function () {
+    $("form").hide().fadeIn(800);
+});
+    </script>
+</body>
+</html>

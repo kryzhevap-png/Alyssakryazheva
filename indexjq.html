@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery Slider</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body { text-align: center; }
+    img { width: 400px; height: 250px; }
+  </style>
+</head>
+<body>
+
+<center>
+  <a href="#">Войти</a> |
+  <a href="#">Зарегистрироваться</a>
+</center>
+
+<div class="slider">
+
+  <div class="slide">
+    <img src="https://img.freepik.com/free-photo/cute-kitten-with-fluffy-fur-staring-playful-curious-generated-by-artificial-intelligence_188544-127456.jpg?semt=ais_hybrid">
+    <p>Алексей: очень хорошо, мне понравилось</p>
+  </div>
+
+  <div class="slide">
+    <img src="https://img.freepik.com/premium-vector/litle-strawberry-cartoon-commercial-use_54889-1126.jpg?semt=ais_hybrid&w=740">
+    <p>Иван: запечатлен фитнес клуб</p>
+  </div>
+
+  <div class="slide">
+    <img src="https://img.freepik.com/free-photo/cute-kitten-with-fluffy-fur-staring-playful-curious-generated-by-artificial-intelligence_188544-127456.jpg?semt=ais_hybrid">
+    <p>Мария: отличный сервис</p>
+  </div>
+
+  <div class="slide">
+    <img src="https://img.freepik.com/free-photo/cute-kitten-with-fluffy-fur-staring-playful-curious-generated-by-artificial-intelligence_188544-127456.jpg?semt=ais_hybrid">
+    <p>Олег: буду приходить ещё</p>
+  </div>
+
+  <button id="prev">Назад</button>
+  <button id="next">Вперёд</button>
+
+</div>
+
+<script>
+let index = 0;
+let slides = $(".slide");
+
+// старт
+slides.hide();
+slides.eq(0).show();
+
+function showSlide(i) {
+  slides.hide();
+  slides.eq(i).show();
+}
+
+$("#next").click(function() {
+  index++;
+  if (index >= slides.length) index = 0;
+  showSlide(index);
+});
+
+$("#prev").click(function() {
+  index--;
+  if (index < 0) index = slides.length - 1;
+  showSlide(index);
+});
+
+// автопереключение каждые 3 секунды
+setInterval(function() {
+  $("#next").click();
+}, 3000);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Slider</title>
+  <style>
+    body { text-align: center; }
+    img { width: 400px; height: 250px; }
+  </style>
+</head>
+<body>
+
+<center>
+  <a href="#">Войти</a> |
+  <a href="#">Зарегистрироваться</a>
+</center>
+
+<div class="slider">
+
+  <div class="slide">
+    <img src="https://via.placeholder.com/400x250?text=1">
+    <p>Алексей: очень хорошо, мне понравилось</p>
+  </div>
+
+  <div class="slide">
+    <img src="https://via.placeholder.com/400x250?text=2">
+    <p>Иван: запечатлен фитнес клуб</p>
+  </div>
+
+  <div class="slide">
+    <img src="https://via.placeholder.com/400x250?text=3">
+    <p>Мария: отличный сервис</p>
+  </div>
+
+  <div class="slide">
+    <img src="https://via.placeholder.com/400x250?text=4">
+    <p>Олег: буду приходить ещё</p>
+  </div>
+
+  <button id="prev">Назад</button>
+  <button id="next">Вперёд</button>
+
+</div>
+
+<script>
+let index = 0;
+let slides = document.querySelectorAll(".slide");
+
+// Скрываем все слайды, показываем первый (точно как в jQuery)
+slides.forEach(slide => slide.style.display = "none");
+slides[0].style.display = "block";
+
+// Функция показа слайда
+function showSlide(i) {
+  slides.forEach(slide => slide.style.display = "none");
+  slides[i].style.display = "block";
+}
+
+// Кнопки навигации
+document.getElementById("next").onclick = function() {
+  index++;
+  if (index >= slides.length) index = 0;
+  showSlide(index);
+};
+
+document.getElementById("prev").onclick = function() {
+  index--;
+  if (index < 0) index = slides.length - 1;
+  showSlide(index);
+};
+
+// Автопереключение каждые 3 секунды
+setInterval(function() {
+  document.getElementById("next").click();
+}, 3000);
+</script>
+
+</body>
+</html>
